@@ -15,6 +15,13 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate,UICollect
     let playerTag = "8L9L9GL"
     
     var playerStats = [String]()
+    
+    
+    let data: [ProfileCollectionViewModel] =
+        [ProfileCollectionViewModel(image: #imageLiteral(resourceName: "img"), title: "Mocking Spongebob", value: "Mocking Spongebob"),
+         ProfileCollectionViewModel(image: #imageLiteral(resourceName: "img"), title: "Mocking Spongebob", value: "Mocking Spongebob"),
+         ProfileCollectionViewModel(image: #imageLiteral(resourceName: "img"), title: "Mocking Spongebob", value: "Mocking Spongebob"),
+         ProfileCollectionViewModel(image: #imageLiteral(resourceName: "img"), title: "Mocking Spongebob", value: "Mocking Spongebob")]
 
     
     
@@ -24,8 +31,7 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate,UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        getPlayer(playerName: playerTag)
-        self.collectionView.reloadSections(IndexSet(integer:0))
+        collectionView.register(UINib.init(nibName: "ProfileViewCell", bundle: nil), forCellWithReuseIdentifier: "ProfileViewCell")
             
         
     }
@@ -35,24 +41,18 @@ class ProfileViewController: UIViewController,UICollectionViewDelegate,UICollect
             let playerData = try? JSONDecoder().decode(Player.self, from: output!)
             //print(playerData!.achievements)
             
-            self.playerStats.append(playerData!.name)
-            self.playerStats.append(String(playerData!.trophies))
             
         }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return playerStats.count
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
-        
-        let pS = playerStats[indexPath.row]
-        
-        cell.displayContent(image:UIImage(named: "img")! , title: pS, value: pS)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileViewCell", for: indexPath) as! CollectionViewCell
+        cell.displayContent(with: data[indexPath.row])
         return cell
     }
     

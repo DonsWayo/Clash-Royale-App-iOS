@@ -13,10 +13,10 @@ class CollectionViewCell: UICollectionViewCell{
     @IBOutlet weak var valueViewCell: UILabel!
     @IBOutlet weak var titleViewCell: UILabel!
     
-    func displayContent(image: UIImage,title: String,value:String){
-        imageViewCell.image = image
-        titleViewCell.text = title
-        valueViewCell.text = value
+    func displayContent(with model: ProfileCollectionViewModel){
+        imageViewCell.image = model.image
+        titleViewCell.text = model.title
+        valueViewCell.text = model.value
     }
     
 }

@@ -64,56 +64,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="WQ1-Ju-7fV" customClass="CollectionViewCell" customModule="crapi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="175" height="82"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A_Char_Barbarian_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="lBq-7E-0HY">
-                                                    <rect key="frame" x="3" y="0.0" width="49" height="53"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="49" id="DOc-yB-ztE"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IV-7c-6Hr" userLabel="value">
-                                                    <rect key="frame" x="58" y="0.0" width="117" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPQ-cq-S3w" userLabel="title">
-                                                    <rect key="frame" x="12" y="54" width="163" height="28"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="28" id="Qn2-Fz-tUe"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="lBq-7E-0HY" firstAttribute="top" secondItem="WQ1-Ju-7fV" secondAttribute="top" id="3u4-HW-q8H"/>
-                                            <constraint firstItem="6IV-7c-6Hr" firstAttribute="trailing" secondItem="OPQ-cq-S3w" secondAttribute="trailing" id="74Z-GO-DII"/>
-                                            <constraint firstItem="lBq-7E-0HY" firstAttribute="top" secondItem="6IV-7c-6Hr" secondAttribute="top" id="GwN-cq-ffx"/>
-                                            <constraint firstAttribute="trailing" secondItem="6IV-7c-6Hr" secondAttribute="trailing" id="NNE-vd-0bx"/>
-                                            <constraint firstItem="lBq-7E-0HY" firstAttribute="leading" secondItem="WQ1-Ju-7fV" secondAttribute="leadingMargin" constant="-5" id="PBg-9c-ZKs"/>
-                                            <constraint firstItem="OPQ-cq-S3w" firstAttribute="leading" secondItem="WQ1-Ju-7fV" secondAttribute="leadingMargin" constant="4" id="PRs-b8-Ff1"/>
-                                            <constraint firstItem="6IV-7c-6Hr" firstAttribute="leading" secondItem="lBq-7E-0HY" secondAttribute="trailing" constant="6" id="WJV-bS-wa8"/>
-                                            <constraint firstItem="OPQ-cq-S3w" firstAttribute="top" secondItem="lBq-7E-0HY" secondAttribute="bottom" constant="1" id="cho-Iy-Rt7"/>
-                                            <constraint firstAttribute="bottom" secondItem="OPQ-cq-S3w" secondAttribute="bottom" id="crm-l2-Qaa"/>
-                                            <constraint firstItem="OPQ-cq-S3w" firstAttribute="top" secondItem="6IV-7c-6Hr" secondAttribute="bottom" constant="13" id="qXf-Lx-eOj"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="imageViewCell" destination="lBq-7E-0HY" id="HcF-Jf-b2V"/>
-                                            <outlet property="titleViewCell" destination="OPQ-cq-S3w" id="yKA-3l-Sj7"/>
-                                            <outlet property="valueViewCell" destination="6IV-7c-6Hr" id="QSa-gl-6V0"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="nA2-vp-aNc" id="oPt-TR-r9o"/>
                                 </connections>
@@ -159,7 +110,4 @@
             <point key="canvasLocation" x="788" y="134"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="A_Char_Barbarian_01.png" width="127" height="151"/>
-    </resources>
 </document>
