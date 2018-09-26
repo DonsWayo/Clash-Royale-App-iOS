@@ -9,8 +9,8 @@
 import UIKit
 
 struct ProfileCollectionViewModel {
-    let image: UIImage
-    let title: String
     let value: String
+    let title: String
+    let image : UIImage
 
 }
